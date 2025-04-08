@@ -1,14 +1,47 @@
+/* General */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(red 1%, black 15%);
+    color: white;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Fin general */
+/* Inicio header */
 #header-nav {
     display: flex;
-    background: linear-gradient(black 50%, red);
+    background: transparent;
     justify-content: space-between;
     width: 100%;
     height: 100px;
 
 }
 
+#header-nav img {
+    width: 70px;
+
+}
+
+#header-nav .navbar-list {
+    width: 92%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
 #header-nav * {
-    padding: 12px;
+    padding-left: 10px;
+    margin-right: 5px;
 
 }
 
@@ -21,28 +54,98 @@
 .navbar-list li a {
     text-decoration: none;
     color: rgb(195, 194, 194);
+    display: inline-block;
 
 }
 
 .navbar-list li a:hover {
     color: rgb(255, 255, 255);
-    transform: scale(1.1, 1);
-    transition: 0.2s ease-in;
+    transform: scale(1.1, 1.1);
+    transition: transform 0.2s ease-in, color 0.2s ease-in;
 
 }
 
-.navbar-logo img {
-    height: 100%;
+/* Fin Header */
+/* Inicio sección 1 */
+/* Contenedor principal */
+#section1 {
+    display: flex;
+    max-width: 1400px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 132, 132, 0.4);
+    backdrop-filter: blur(15px);
 }
+
+/* Lado izquierdo (aside) */
+aside {
+    background-color: #2e2e2e;
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+}
+
+aside h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #e92b1e;
+}
+
+aside img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #e92b1e;
+    box-shadow: 0 0 10px #ec756d;
+}
+
+/* Lado derecho (biografía) */
+#biografia {
+    flex: 2;
+    padding: 40px;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    #section1 {
+        flex-direction: column;
+    }
+
+    aside, #biografia {
+        padding: 20px;
+    }
+
+    aside img {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Fin sección 1 */
+/* Inicio seccion 5 */
 
 #section5 {
     margin-top: 100px;
-    display: flex;
+    justify-content: space-evenly;
     height: 250px;
-    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
 
 .band_member img {
+    flex: 0 0 100%;
     height: 90%;
-    width: 90%;
+    object-fit: cover;  
+    scroll-snap-align: center;
+      
 }
+
+/* Fin sección 5 */
