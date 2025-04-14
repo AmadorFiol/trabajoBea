@@ -23,6 +23,11 @@ hr {
 
 }
 
+.hr-especial {
+    width: 60%;
+
+}
+
 /* Fin general */
 /* Inicio header */
 #header-nav {
@@ -153,6 +158,18 @@ aside img:hover {
     }
 }
 /* Fin sección 1 */
+/* Inicio sección 2 */
+#section2 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#recorrido-musical {
+    width: 100%;
+
+}
+/* Fin sección 2 */
 /* Inicio seccion 5 */
 #section5 {
     margin-top: 100px;
