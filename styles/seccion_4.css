@@ -1,0 +1,118 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+/* Barra de navegación */
+.navbar {
+    background: linear-gradient(45deg, #5c0202, #090000);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(145, 1, 1, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.menu a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+    transform: scale(1.05);
+}
+
+/* Secciones */
+.section {
+    min-height: 100vh;
+    padding: 100px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #444;
+}
+
+
+/* texto e imagen Noticias */
+
+.content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+.text {
+    flex: 1; 
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.image {
+    flex-shrink: 0; 
+    max-width: 500px; 
+    width: 100%;
+}
+
+.image img {
+    width: 100%; 
+    border-radius: 8px; 
+}
+
+
+.section table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: transparent; /* Fondo transparente para mantener el diseño */
+    color: white; 
+    text-align: center;
+}
+
+.section th, 
+.section td {
+    border: 2px solid #800000; 
+    padding: 10px;
+}
+
+.section th {
+    background-color: #5c0202; 
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(45deg, #8b0000, #000);
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(255, 0, 0, 0.3);
+}
