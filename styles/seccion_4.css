@@ -1,3 +1,19 @@
+/* Mejora en visión al poner la pantalla en diminuto */
+/* @media (max-width: 768px) {
+    #section1 {
+        flex-direction: column;
+    }
+
+    aside, #biografia {
+        padding: 20px;
+    }
+
+    aside img {
+        width: 120px;
+        height: 120px;
+    }
+} */
+
 /* General */
 html, body {
     height: 100%;
