@@ -99,7 +99,7 @@ hr {
     box-shadow: 0 10px 30px rgba(202, 202, 202, 0.4);
     backdrop-filter: blur(15px);
     animation-name: entrada;
-    animation-duration: 2s;
+    animation-duration: 1s;
 
 }
 
