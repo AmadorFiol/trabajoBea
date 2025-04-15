@@ -76,7 +76,6 @@ hr {
     transition: transform 0.2s ease-in, color 0.2s ease-in;
 
 }
-
 /* Fin Header */
 /* Inicio sección 1 */
 /* Contenedor principal */
@@ -90,6 +89,8 @@ hr {
 
 #section1 {
     display: flex;
+    width: 90%;
+    height: 100%;
     max-width: 1400px;
     margin: 50px auto;
     background-color: rgba(255, 255, 255, 0.05);
