@@ -261,4 +261,50 @@ aside img:hover {
 
 }
 
+.band_member {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.band_member .preview {
+    visibility: hidden;
+    position: absolute;
+    /* top: -200px; Ajusta según necesidad */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 1s ease;
+}
+
+.band_member .preview img {
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+}
+
+.band_member .preview span {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.band_member:hover .preview {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 /* Fin sección 5 */
