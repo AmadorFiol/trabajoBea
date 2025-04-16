@@ -1,0 +1,256 @@
+/* Mejora en visión al poner la pantalla en diminuto */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .image {
+        max-width: 90%;
+    }
+
+    .img-gira {
+        width: 90%;
+    }
+
+    .section table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .section th, .section td {
+        padding: 8px;
+    }
+
+    /* Ajustes para el contenedor de noticias en dispositivos pequeños */
+    .noticias-box {
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #noticias h1 {
+        font-size: 2rem;
+    }
+}
+
+/* General */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(red 1%, black 15%);
+    color: white;
+}
+
+/* navbar gabi (inicio) */
+#header-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+}
+
+#header-nav img {
+    width: 70px;
+}
+
+#header-nav .navbar-list {
+    width: 92%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#header-nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: rgb(195, 194, 194);
+    display: inline-block;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+.navbar-list li a:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in, color 0.2s ease-in;
+}
+
+/* Secciones */
+.section {
+    padding: 60px 20px;
+    display: block;
+}
+
+.section:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+
+#entrada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 50px; /* top, right, bottom, left */
+    width: 100%;
+}
+
+#entrada #gira {
+    max-width: 1200px; /* Limita el tamaño máximo */
+    width: 100%; /* Asegura que ocupe el 100% del contenedor */
+    text-align: center; /* Alinea el texto */
+}
+
+#entrada .img-gira {
+    width: 80%;
+    max-width: 900px; /* Limita el tamaño máximo de la imagen */
+    border-radius: 8px;
+}
+
+.img-gira {
+    width: 60%;
+    border-radius: 8px;
+}
+
+
+#main-content .section {
+    width: 50%; /* Controla el tamaño de las secciones para que estén alineadas en el contenedor */
+}
+
+/* Texto e imagen Noticias */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; /* menos espacio entre texto e imagen */
+    transform: scale(0.95); /* reduce tamaño general un poco */
+}
+
+.text {
+    flex: 1;
+    font-size: 1.05rem; /* más pequeño */
+    line-height: 1.5; /* levemente más compacto */
+}
+
+.image {
+    flex-shrink: 0;
+    max-width: 500px; /* antes era 600px */
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Tabla de conciertos */
+.section table {
+    width: 80%;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+    margin: 0 auto; /* ⬅️ Esta línea centra la tabla */
+}
+
+#horario h1 {
+    text-align: center;
+}
+
+
+.section th, .section td {
+    border: 2px solid #800000;
+    padding: 10px;
+}
+
+.section th {
+    background-color: #5c0202;
+}
+
+/* Noticias box */
+.noticias-container {
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 15px;
+    padding: 30px; /* reducido */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    max-width: 1500px; /* reducido */
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.noticias-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+#noticias h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fbf9f9;
+}
+
+.noticias-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffffff; /* Texto blanco */
+}
+
+.noticias-container p {
+    font-size: 1.1rem;
+    color: #ddd; /* Texto gris claro */
+    line-height: 1.8; /* Espaciado entre líneas */
+}
+
+.noticias-container img {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeInContainer 2s ease-in-out forwards;
+}
+
+.img-gira.fade-in-glow {
+    opacity: 0;
+    border-radius: 8px;
+    border: 3px solid rgba(255, 255, 255, 0.5); /* borde blanco suave */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* contorno iluminado */
+    transition: opacity 2s ease-in-out;
+    animation: fadeInImage 2s forwards;
+}
+/* Animación para fade-in */
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
