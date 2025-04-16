@@ -52,6 +52,11 @@ html, body {
     color: white;
 }
 
+main {
+    background-color: black;
+
+}
+
 /* navbar gabi (inicio) */
 #header-nav {
     display: flex;
