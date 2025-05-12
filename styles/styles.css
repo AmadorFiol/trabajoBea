@@ -187,61 +187,105 @@ aside img:hover {
 
 /* Fin sección 1 */
 /* Inicio sección 2 */
-#section2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Centra hijos horizontalmente */
+/* Sección general */
+.timeline-section {
+    padding: 60px 20px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
 }
 
-#recorrido-musical {
-    margin-top: 20px;
-    width: 100%;
-    /* o un ancho fijo si quieres */
-    max-width: 800px;
-    /* por ejemplo */
+.timeline-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #ff5555;
 }
 
+/* Línea de tiempo */
 .timeline {
     position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 40px auto;
-    width: 90%;
-    max-width: 900px;
-    border-top: 3px solid #ccc;
-    /* Línea horizontal */
-}
-
-.event {
-    text-align: center;
-    position: relative;
-}
-
-.dot {
-    width: 20px;
-    height: 20px;
-    background-color: #ff6767;
-    border-radius: 50%;
+    max-width: 800px;
     margin: 0 auto;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ff5555;
+}
+
+/* Elementos */
+.timeline-item {
     position: relative;
-    top: -11px;
-    /* para que la bolita se centre en la línea */
+    margin-bottom: 40px;
+    padding-left: 40px;
+    text-align: left;
 }
 
-.dot:hover {
-    transform: scale(1.5);
-    background-color: #ca2e2e;
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background-color: #ff5555;
+    border-radius: 50%;
+    border: 3px solid white;
+    z-index: 1;
 }
 
-.event p {
-    margin-top: 10px;
-    font-size: 14px;
+.timeline-content {
+    background-color: #1c1c1c;
+    margin-left: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #aaaaaa;
+    transition: transform 0.3s;
 }
 
+.timeline-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #ec7d7d;
+    transition: 0.3s ease-in-out;
+
+
+}
+
+.timeline-content h2 {
+    margin-top: 0;
+    color: #ff5555;
+    font-size: 1.3em;
+}
+
+.timeline-content p {
+    margin: 5px 0 0;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        left: 16px;
+    }
+
+    .timeline-item {
+        padding-left: 50px;
+    }
+
+    .timeline-dot {
+        left: 8px;
+    }
+}
 /* Fin sección 2 */
 /* Inicio seccion 5 */
 #section5 {
@@ -273,7 +317,6 @@ aside img:hover {
 .band_member .preview {
     visibility: hidden;
     position: absolute;
-    /* top: -200px; Ajusta según necesidad */
     left: 50%;
     transform: translateX(-50%);
     background-color: red;
@@ -306,8 +349,6 @@ aside img:hover {
     opacity: 1;
     pointer-events: auto;
 }
-
-
 /* Fin sección 5 */
 
 /* ibti*/

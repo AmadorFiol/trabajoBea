@@ -1,56 +1,68 @@
 body {
-    background-color: black;
+    background-color: black;  
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
+    padding: 0;  
+    margin: 0;  
 }
+
+/* Estilo específico para el navbar */
 #header-nav {
     display: flex;
-    background: linear-gradient(red,black);
+    background: linear-gradient(rgb(211, 17, 17), black); 
     justify-content: space-between;
-    width: 100%;
-    height: 100px;
-
+    width: 100%;  
+    height: 100px;  
+    padding: 0;  
+    margin: 0;  
+    box-sizing: border-box;  
 }
+
 
 #header-nav img {
     width: 70px;
-
 }
 
+/* Estilo para los elementos de la lista dentro del navbar */
+#header-nav .navbar-list li a {
+    text-decoration: none; 
+    color: rgb(234, 222, 222); 
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+/* El navbar-list es un contenedor que también tiene un 92% de ancho */
 #header-nav .navbar-list {
-    width: 92%;
+    width: 92%;  
     align-items: center;
     justify-content: space-around;
-
+    display: flex;  
 }
 
-#header-nav * {
-    padding-left: 10px;
-    margin-right: 5px;
-}
 
 #header-nav ul {
     display: flex;
     list-style: none;
-
+    margin: 0;  /* Elimina márgenes predeterminados */
+    padding: 0;  /* Elimina padding predeterminado */
 }
 
+/* Enlaces dentro de navbar */
 .navbar-list li a {
     text-decoration: none;
     color: rgb(195, 194, 194);
     display: inline-block;
-
 }
 
+/* Efecto de hover en los enlaces */
 .navbar-list li a:hover {
     color: rgb(255, 255, 255);
     transform: scale(1.1, 1.1);
     transition: transform 0.2s ease-in, color 0.2s ease-in;
-
 }
 
+/* Estilo del encabezado principal (h1) */
 h1 {
     color: red;
     font-size: 3em;
