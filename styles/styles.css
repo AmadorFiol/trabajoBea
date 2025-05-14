@@ -290,7 +290,6 @@ aside img:hover {
 /* Inicio seccion 5 */
 .section5 {
     margin-top: 100px;
-    justify-content: space-evenly;
     height: 300px;
     width: 100%;
     display: flex;
@@ -310,27 +309,17 @@ aside img:hover {
     margin: 0 10px;
 }
 
+/* Estandarizar tamaño imagenes */
 .imagenes img {
     flex: 0 0 100%;
     height: 90%;
+    width: auto;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
     scroll-snap-align: start;
     display: block;
     border-radius: 8px;
 }
-
-/* 
-Estandarizar tamaño imagenes */ /*
-.imagenes img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    scroll-snap-align: start;
-    display: block;
-    border-radius: 8px;
-} */
 
 /* Globo texto */
 .imagenes .info {
@@ -361,7 +350,7 @@ Estandarizar tamaño imagenes */ /*
 .imagenes .info::after {
     content: "";
     position: absolute;
-    bottom: -15px;             /* justo debajo del contenedor */
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     border-width: 8px;
