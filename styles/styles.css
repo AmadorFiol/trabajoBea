@@ -288,25 +288,21 @@ aside img:hover {
 }
 /* Fin sección 2 */
 /* Inicio seccion 5 */
-#section5 {
+.section5 {
     margin-top: 100px;
     justify-content: space-evenly;
-    height: 250px;
+    height: 300px;
     width: 100%;
     display: flex;
+    margin: auto;
     overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 }
 
-.band_member img {
-    flex: 0 0 100%;
-    height: 90%;
-    object-fit: cover;
-    scroll-snap-align: center;
-
-}
-
-.band_member {
+/* Posicion globo de texto */
+.imagenes {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -314,7 +310,30 @@ aside img:hover {
     margin: 0 10px;
 }
 
-.band_member .preview {
+.imagenes img {
+    flex: 0 0 100%;
+    height: 90%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    scroll-snap-align: start;
+    display: block;
+    border-radius: 8px;
+}
+
+/* 
+Estandarizar tamaño imagenes */ /*
+.imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    scroll-snap-align: start;
+    display: block;
+    border-radius: 8px;
+} */
+
+/* Globo texto */
+.imagenes .info {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -325,29 +344,29 @@ aside img:hover {
     padding: 10px;
     border-radius: 8px;
     z-index: 10;
-    display: flex;
-    flex-direction: row; /* Fila horizontal: imagen + texto */
     align-items: center;
+    text-align: center;
     gap: 10px;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     white-space: nowrap;
 }
 
-.band_member:hover .preview {
+/* Visibilidad globo texto */
+.imagenes:hover .info {
     visibility: visible;
     opacity: 1;
 }
 
-.band_member .preview span {
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-
-.band_member .preview img {
-    width: 100%;
-    height: auto;
-    border: 2px solid white;
+/* Flechita globo texto */
+.imagenes .info::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;             /* justo debajo del contenedor */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
 }
 
 /* Fin sección 5 */

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+Este archivo era solo para realizar pruebas
+A la hora de entregar sera eliminado
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel de Imágenes con Scroll Horizontal</title>
+  <style>
+    body {
+        background-color: red;
+    }
+    /* Contenedor del carrusel */
+    .carrusel {
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px; /* Espacio para la burbuja */
+    }
+
+    /* Contenedor de las imágenes */
+    .imagenes {
+        display: flex;
+        width: max-content;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Cada bloque de imagen */
+    .imagenes div {
+        position: relative;
+        overflow: visible;
+        position: relative;
+        flex: 0 0 auto;
+        width: 200px;
+        height: 250px;
+    }
+
+    /* Imagenes con tamaño uniforme */
+    .imagenes img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+        scroll-snap-align: start;
+        display: block;
+        border-radius: 8px;
+    }
+
+
+    .info {
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1;
+        max-width: 90%;
+        text-align: center;
+    }
+
+
+    /* Flecha ajustada (ahora apuntando hacia abajo) */
+.info::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent red transparent;
+}
+
+
+    /* Hover sobre la imagen: mostrar burbuja */
+    .imagenes img:hover + .info {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    /* Efecto al pasar el ratón sobre la imagen */
+    .imagenes img:hover {
+        transform: scale(0.95);
+    }
+
+    /* Estilo de la barra de scroll (opcional, solo en WebKit) */
+    .carrusel::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .carrusel::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    .carrusel::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="carrusel">
+    <div class="imagenes">
+      <div>
+        <img src="./img/BillWyman.png" alt="Imagen no cargada">
+        <div class="info"><p>Bill Wyman</p><p>1962 - 1993</p></div>
+      </div>
+      <div>
+        <img src="./img/BrianJones.png" alt="Imagen no cargada">
+        <div class="info"><p>Brian Jones</p><p>1962 - 1969</p></div>
+      </div>
+      <div>
+        <img src="./img/CharlieWatts.png" alt="Imagen no cargada">
+        <div class="info"><p>Charlie Watts</p><p>1963 - 2021</p></div>
+      </div>
+      <div>
+        <img src="./img/DarrylJones.png" alt="Imagen no cargada">
+        <div class="info"><p>Darryl Jones</p><p>1993 - Actualidad</p></div>
+      </div>
+      <div>
+        <img src="./img/IanStewart.png" alt="Imagen no cargada">
+        <div class="info"><p>Ian Stewart</p><p>1962 - 1985</p></div>
+      </div>
+      <div>
+        <img src="./img/KeithRichards.png" alt="Imagen no cargada">
+        <div class="info"><p>Keith Richards</p><p>1962 - Actualidad</p></div>
+      </div>
+      <div>
+        <img src="./img/MickJagger.png" alt="Imagen no cargada">
+        <div class="info"><p>Mick Jagger</p><p>1962 - Actualidad</p></div>
+      </div>
+      <div>
+        <img src="./img/MickTaylor.png" alt="Imagen no cargada">
+        <div class="info"><p>Mick Taylor</p><p>1969 - 1974</p></div>
+      </div>
+      <div>
+        <img src="./img/RickyFenson.png" alt="Imagen no cargada">
+        <div class="info"><p>Ricky Fenson</p><p>1962 - 1963</p></div>
+      </div>
+      <div>
+        <img src="./img/RonnieWood.png" alt="Imagen no cargada">
+        <div class="info"><p>Ronnie Wood</p><p>1975 - Actualidad</p></div>
+      </div>
+      <div>
+        <img src="./img/TonyChapman.png" alt="Imagen no cargada">
+        <div class="info"><p>Tony Chapman</p><p>1962</p></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
